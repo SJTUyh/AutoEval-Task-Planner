@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autoeval-task-planner"
+version = "0.1.0"
+description = "评估整套测评任务的最优总时长并给出任务编排建议"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+ssh = ["paramiko>=3"]
+
+[project.scripts]
+autoeval-planner = "autoeval_planner.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

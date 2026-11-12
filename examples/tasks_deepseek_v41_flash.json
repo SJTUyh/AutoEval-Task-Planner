@@ -1,0 +1,50 @@
+{
+  "target": {
+    "base_url": "https://api.deepseek.com/v1",
+    "model": "deepseek-flash"
+  },
+  "throughput": {
+    "mode": "file",
+    "path": "throughput_deepseek_flash.json"
+  },
+  "resources": {
+    "mode": "server",
+    "server": "179.214.2.3",
+    "headroom": 0.2
+  },
+  "tasks": [
+    {
+      "task_id": "gpqa",
+      "config": "../../AutoEval-Standard/DeepSeek-V4.1-Flash-1017/GPQA_Diamond/standard_config.json"
+    },
+    {
+      "task_id": "mmmu_pro",
+      "config": "../../AutoEval-Standard/DeepSeek-V4.1-Flash-1017/MMMU-Pro/standard_config.json",
+      "estimate": {
+        "case_count": 1730,
+        "input_tokens_median": 417,
+        "input_tokens_p90": 964,
+        "output_tokens_median": 1102,
+        "output_tokens_p90": 21856,
+        "overhead_sec": 1.0
+      }
+    },
+    {
+      "task_id": "deepswe",
+      "config": "../../AutoEval-Standard/DeepSeek-V4.1-Flash-1017/DeepSWE/standard_config.json",
+      "estimate": {
+        "case_count": 113,
+        "input_tokens_median": 22869388,
+        "input_tokens_p90": 43972280,
+        "output_tokens_median": 105860,
+        "output_tokens_p90": 144340,
+        "overhead_sec": 1597.0
+      }
+    }
+  ],
+  "simulation": {
+    "runs": 100,
+    "seed": 20261111,
+    "throughput_cv": 0.10
+  }
+}

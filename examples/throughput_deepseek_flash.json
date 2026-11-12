@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "source": "probe",
+  "base_url": "https://api.deepseek.com/v1",
+  "model": "deepseek-flash",
+  "effort": "max",
+  "measured_at": "2026-11-11T16:40:06+08:00",
+  "levels": [
+    {
+      "concurrency": 1,
+      "decode_tps": 143.881,
+      "prefill_tps": null,
+      "ttft_sec": 6.203,
+      "error_rate": 0.0,
+      "usage_estimated": false
+    },
+    {
+      "concurrency": 2,
+      "decode_tps": 278.585,
+      "prefill_tps": null,
+      "ttft_sec": 6.6875,
+      "error_rate": 0.0,
+      "usage_estimated": false
+    },
+    {
+      "concurrency": 4,
+      "decode_tps": 568.19,
+      "prefill_tps": null,
+      "ttft_sec": 6.7538,
+      "error_rate": 0.0,
+      "usage_estimated": false
+    },
+    {
+      "concurrency": 8,
+      "decode_tps": 1134.189,
+      "prefill_tps": null,
+      "ttft_sec": 8.4454,
+      "error_rate": 0.0,
+      "usage_estimated": false
+    },
+    {
+      "concurrency": 16,
+      "decode_tps": 2314.058,
+      "prefill_tps": null,
+      "ttft_sec": 8.9748,
+      "error_rate": 0.0,
+      "usage_estimated": false
+    },
+    {
+      "concurrency": 32,
+      "decode_tps": 4257.561,
+      "prefill_tps": null,
+      "ttft_sec": 9.8591,
+      "error_rate": 0.0,
+      "usage_estimated": false
+    }
+  ],
+  "request": {
+    "endpoint": "https://api.deepseek.com/v1/chat/completions",
+    "stream": true,
+    "api_key_header": "Authorization",
+    "headers": [],
+    "body_overrides": []
+  },
+  "derived": {
+    "max_concurrency": 32,
+    "peak_decode_tps": 4257.561,
+    "peak_prefill_tps": null
+  },
+  "notes": null
+}

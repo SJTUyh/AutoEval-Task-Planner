@@ -218,3 +218,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# AutoEval-Task-Planner
+*sqlite3-wal
+*sqlite3-shm
+outputs/
+/plan.json
+
